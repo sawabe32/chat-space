@@ -11,7 +11,7 @@ DB設計
 ### Association
 - has_many :groups,through::users_groups
 - has_many :users_groups
-- has_many :users_messagea
+- has_many :users_messages
   
 # messgagesテーブル
 
@@ -19,8 +19,8 @@ DB設計
 |------|----|-------|
 |body|text| |
 |image|string| |
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -41,8 +41,8 @@ DB設計
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
