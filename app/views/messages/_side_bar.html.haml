@@ -5,16 +5,29 @@
       .side-bar__user-name--user-name__name
         = current_user.name
       .side-bar__user-name--user-name__icon
-        =link_to "#", class: "contents__btn contents__btn--icon1" do
+        =link_to new_group_path(current_user), class: "contents__btn contents__btn--icon1" do
           <i class="fas fa-edit icon1"></i>
         =link_to edit_user_path(current_user), class: "contents__btn contents__btn--icon2" do
           <i class="fas fa-cog icon2"></i>
   .side-bar__group-list
-    .side-bar__group-list__group-name
-      School
-    .side-bar__group-list__group-message
-      まだコメントはありません。
-    .side-bar__group-list__group-name
-      School
-    .side-bar__group-list__group-message
-      まだコメントはありません。
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .side-bar__group-list__group-name
+            = group.name
+          .side-bar__group-list__group-message
+            メッセージはまだありません。
+
+
+
+
+
+
+    -# .side-bar__group-list__group-name
+    -#   School
+    -# .side-bar__group-list__group-message
+    -#   まだコメントはありません。
+    -# .side-bar__group-list__group-name
+    -#   School
+    -# .side-bar__group-list__group-message
+    -#   まだコメントはありません。
