@@ -9,14 +9,15 @@
           <i class="fas fa-edit icon1"></i>
         =link_to edit_user_path(current_user), class: "contents__btn contents__btn--icon2" do
           <i class="fas fa-cog icon2"></i>
+
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to "#" do
+        = link_to group_messages_path(group) do
           .side-bar__group-list__group-name
             = group.name
           .side-bar__group-list__group-message
-            メッセージはまだありません。
+            = group.show_last_message
 
 
 
