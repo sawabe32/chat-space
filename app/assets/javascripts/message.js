@@ -16,8 +16,8 @@ $(function(){
         </p>
          <img src=${message.image} >
       </div>`
-     return html;
-   } else {
+   }
+   else {
      var html =
       `<div class="chat-main__message-list__list">
         <div class="chat-main__message-list__list__name">
@@ -32,8 +32,8 @@ $(function(){
           ${message.content}
         </p>
       </div>`
-     return html;
    };
+   return html;
  }
 $('#new_message').on('submit', function(e){
  e.preventDefault();
