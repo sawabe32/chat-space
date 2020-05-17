@@ -10,12 +10,16 @@
 .side_contents{
   background-color: white;
   width:300px;
-  float:left;
+  height:100vh;
+  position:fixed;
+  // float:left;
+  
 }
 
 .side-bar__user-name{
   background-color: #253141;
   height: 100px;
+  position: relative;
 
   &--user-name{
     width:260px;
@@ -24,22 +28,26 @@
     position: absolute;
     top:40px;
     left:20px;
-    font-size:16px;
-    font-weight:bold;
-    color:#ffffff;
     display:flex;
-    align-items: center;
     justify-content: space-between;
 
-  &__icon{
+    &__name{
+      font-size:16px;
+      font-weight:bold;
+      color:#ffffff;
+
+    }
+    &__icon{
       width:60px;
       height:20px;
       background-color: #253141;
       display:flex;
       justify-content: flex-end;
       align-items: center;
+
+    }
   }
-  }
+ 
   .icon1{
     color:#ffffff;
     padding-right:5px;
@@ -55,7 +63,7 @@
   width:300px;
   background-color: #2f3e51;
   position: absolute;
-  top:100px;
+  // top:100px;
 
   &__group-name{
     color:#ffffff;
@@ -74,7 +82,7 @@
 .main_contents{
   background-color: blue;
   width:calc(100vw - 300px);
-  float:right;
+  // float:right;
   position:fixed;
   left:300px;
 }
