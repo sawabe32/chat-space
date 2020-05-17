@@ -15,15 +15,6 @@
   .chat-main__message-list
     = render @messages
 
-  -# .chat-main__message-list
-  -#   .chat-main__message-list__list
-  -#     .chat-main__message-list__list__name
-  -#       masa
-  -#     .chat-main__message-list__list__date
-  -#       2019/11/20(Wed) 17:43:01
-  -#   .chat-main__message-list__message
-  -#     Hello!
-
   .chat-main__message-form
 
     -# %form
@@ -34,10 +25,3 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'input-box__image__file'
       = f.submit 'Send', class: 'submit-btn'
-
-      -# .input-box
-      -#   %input.input-box__text{type: "text", placeholder:"type a message"}
-      -#   %label{class: "input-box__image"}
-      -#     = icon('fas', 'image')
-      -#     %input{type: "file",class: "input-box__image__file"}
-      -# %input.submit-btn{type:"submit",value:"Send"}
